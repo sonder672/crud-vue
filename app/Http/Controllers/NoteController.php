@@ -11,12 +11,7 @@ class NoteController extends Controller
     public function index()
     {
         $notes = Note::all();
-        return response()->json(['notes' => $notes], 200); 
-    }
-
-    public function create()
-    {
-        return redirect()->route('/');
+        return response()->json($notes); 
     }
 
     public function store(Request $request)
@@ -34,9 +29,7 @@ class NoteController extends Controller
     {
         try {
             $notes = Note::findOrFail($id);
-        return response()->json([
-            'notes' => $notes
-        ], 200);
+        return response()->json($notes);
         }
         catch (\Exception $e)
         {
@@ -50,9 +43,7 @@ class NoteController extends Controller
     {
         try {
             $notes = Note::findOrFail($id);
-        return response()->json([
-            'notes' => $notes
-        ], 200);
+        return response()->json($notes);
         }
         catch (\Exception $e)
         {
@@ -73,9 +64,7 @@ class NoteController extends Controller
         try {
             $notes = Note::findOrFail($id);
             $notes->update($AllInput);
-        return response()->json([
-            'notes' => $notes
-        ], 200);
+        return response()->json($notes);
         }
             catch (\Exception $e)
         {
@@ -90,9 +79,7 @@ class NoteController extends Controller
         try{
             $notes = Note::findOrFail($id);
             $notes->delete();
-        return response()->json([
-            'msg' => 'done'
-        ], 200);
+        return response()->json($notes);
         }
         catch (\Exception $e) {
             return response()->json([

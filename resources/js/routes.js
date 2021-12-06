@@ -1,4 +1,4 @@
-const home = () => import('./components/Home.vue');
+const home = () => import('./components/home.vue');
 
 //Componentes de las notas
 
