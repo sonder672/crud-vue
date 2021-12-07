@@ -84,6 +84,13 @@ var staticRenderFns = [
         _c("div", { staticClass: "container mt-4" }, [
           _c("div", { staticClass: "col text-center" }, [
             _c("h1", [_vm._v("Bienvenido")]),
+            _vm._v(" "),
+            _c("div", [
+              _c("p", [
+                _vm._v("\r\n                Este proyecto está hecho con "),
+                _c("span", {}, [_vm._v("laravel + VUE")]),
+              ]),
+            ]),
           ]),
         ]),
       ]),

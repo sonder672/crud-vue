@@ -17,7 +17,7 @@ class NoteController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => ['required', 'unique:posts', 'max:255'],
+            'title' => ['required', 'max:255'],
             'content' => ['required', 'string']
         ]);
         $AllInput = $request->except('_token');
@@ -56,7 +56,7 @@ class NoteController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'title' => ['required', 'unique:posts', 'max:255'],
+            'title' => ['required', 'max:255'],
             'content' => ['required', 'string']
         ]);
         $AllInput = $request->except('_token');

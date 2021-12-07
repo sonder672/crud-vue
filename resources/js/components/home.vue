@@ -7,6 +7,11 @@
     <div class="container mt-4">
         <div class="col text-center">
             <h1>Bienvenido</h1>
+            <div>
+              <p>
+                Este proyecto está hecho con <span class="">laravel + VUE</span> 
+              </p>
+            </div>
         </div>
     </div>
   </div>
